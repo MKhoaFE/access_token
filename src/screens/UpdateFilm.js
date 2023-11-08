@@ -60,21 +60,19 @@ function UpdateFilm() {
 
   const handleUpdateModalOk = () => {
     const updatedData = {
-      film_id: updateData.film_id, 
       title: updateData.title, 
     };
   
-    axios.put(`http://localhost:3000/Api/v1/films/${updateData.film_id}`, updatedData)
+    axios.patch(`http://localhost:3000/Api/v1/films/${updateData.film_id}`, updatedData)
       .then((response) => {
         console.log("Dữ liệu đã được cập nhật thành công:", response.data);
         setUpdateModalVisible(false);
-        handleLoadData(); 
+        handleLoadData();
       })
       .catch((error) => {
         console.error("Lỗi khi cập nhật dữ liệu:", error);
       });
   };
-
   const handleUpdateModalCancel = () => {
     setUpdateModalVisible(false);
   };
