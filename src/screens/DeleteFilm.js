@@ -41,10 +41,8 @@ function DeleteFilm() {
   };
 
   const handleDelete = (filmId) => {
-    // Send a DELETE request to the API to delete the film with the specified ID.
     axios.delete(`http://localhost:3000/Api/v1/films/${filmId}`)
       .then(() => {
-        // Remove the deleted film from the data array.
         setData(data.filter(film => film.film_id !== filmId));
         console.log("Deleted film:", filmId);
       })
