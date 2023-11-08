@@ -18,22 +18,17 @@ function SiderComponent() {
         }}
       >
         <Menu.Item key="1">
-          <Link to="/get">Introduction</Link>
+          <Link to="/get">GET DETAIL Film</Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <Link to="/get">GET Actor</Link>
+          <Link to="/post">POST Film</Link>
         </Menu.Item>
+
         <Menu.Item key="3">
-          <Link to="/post">POST Actor</Link>
+          <Link to="/delete">DELETE Film</Link>
         </Menu.Item>
         <Menu.Item key="4">
-          <Link to="/detail">DETAIL Actor</Link>
-        </Menu.Item>
-        <Menu.Item key="5">
-          <Link to="/delete">DELETE Actor</Link>
-        </Menu.Item>
-        <Menu.Item key="6">
-          <Link to="/update">UPDATE Actor</Link>
+          <Link to="/update">UPDATE Film</Link>
         </Menu.Item>
       </Menu>
     </Sider>

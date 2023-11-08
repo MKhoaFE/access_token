@@ -1,14 +1,15 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Layout } from "antd";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HeaderComponent from "./components/HeaderComponent";
 import SiderComponent from "./components/SiderComponent";
-import UpdateActor from "./screens/UpdateActor";
-import DetailActor from "./screens/DetailActor";
-import DeleteActor from "./screens/DeleteActor";
-import PostActor from "./screens/PostActor";
-import GetActor from "./screens/GetActor";
+import GetActor from "./screens/GetFilm";
+
+import GetFilm from "./screens/GetFilm";
+import PostFilm from "./screens/PostFilm";
+
+import DeleteFilm from "./screens/DeleteFilm";
+import UpdateFilm from "./screens/UpdateFilm";
 
 const { Content } = Layout;
 
@@ -18,21 +19,20 @@ function App() {
       <Layout
         style={{
           height: "100vh",
-          width: "80vw",
-          marginLeft: "10%",
-          marginRight: "10%",
+          width: "60vw",
+          marginLeft: "20%",
+          marginRight: "20%",
         }}
       >
         <HeaderComponent/>
-        <Layout>
+        <Layout style={{backgroundColor:"white"}}>
           <SiderComponent/>
           <Content>
               <Routes>
-                <Route path='/get' element={<GetActor />} />
-                <Route path='/post' element={<PostActor />} />
-                <Route path='/detail' element={<DetailActor />} />
-                <Route path='/delete' element={<DeleteActor/>}/>
-                <Route path='/update' element={<UpdateActor />}>
+                <Route path='/get' element={<GetFilm />} />
+                <Route path='/post' element={<PostFilm />} />
+                <Route path='/delete' element={<DeleteFilm/>}/>
+                <Route path='/update' element={<UpdateFilm />}>
                 </Route>
                 <Route path='*' element={<GetActor />} />
               </Routes>
